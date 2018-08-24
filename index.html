@@ -1,0 +1,313 @@
+<html>
+  <head>
+    <title>JsTetris</title>
+
+    <meta name="viewport" content="initial-scale=0.50">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+
+
+  </head>
+  <body>
+<div id="global">
+<div id="izquierda">
+<div id="titulo">
+<h1><span class="titulo">Js</span>Tetris</h1>
+</div>
+<table id="siguiente">
+  <tr class="next">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="next">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="next">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="next">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+    <button id="estilo" onclick="cambiarestilo()">Cambiar estilo</button>
+    <button onclick="acciones(40)">Bajar</button>
+    <button onclick="acciones(37)">Izquierda</button>
+    <p>SRP 2018</p> 
+
+</div>
+
+<div id="descripcion">
+<h2><span class="titulo">Javascript</span>-based Tetris clone</h2>
+
+    <div id="puntos">
+        <p id="texto">Puntos</p><p id="puntuacion">0</p>
+    </div>
+    <button id="nuevo" onclick="juegonuevo()">Nuevo juego</button>
+    <button onclick="acciones(38)">Girar</button>
+    <button onclick="acciones(39)">Derecha</button>
+
+
+</div>
+<table id="juego">
+  <tr class="principal">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="principal">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="principal">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="principal">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="principal">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="principal">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="principal">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="principal">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="principal">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="principal">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="principal">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="principal">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="principal">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="principal">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="principal">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="principal">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="principal">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="principal">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="principal">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="principal">
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td> 
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+</table>
+
+
+
+
+
+    <script type="text/javascript" src="escript.js"></script>
+
+</div>
+</body>
+</html>
